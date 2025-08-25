@@ -1,3 +1,7 @@
+  Html,body{
+Overflow-x:hidden important 
+}
+  
   #preloader {
       position: fixed;
       top: 0; left: 0;
@@ -677,15 +681,17 @@
      .info-box {
       background-color: white; /* slightly transparent */
       border-radius: 10px;
-      padding: 30px;
+      padding: 43px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
       border-left: 6px solid orange;
+      margin-bottom: 10px;
+      
     }
 
     .form-box {
       background-color: #7b1818;
       border-radius: 10px;
-      padding: 30px;
+      padding: 35px;
       box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
       color: white;
     }
@@ -749,14 +755,14 @@
     }
     .nadi-unique-card p {
       color: #fff;
-      background: #a5270e;
+      background: #f4a300;
       padding: 10px;
       border-radius: 4px;
       margin: 0 auto;
       display: inline-block;
     }
     .nadi-unique-btn {
-      background: #a5270e;
+      background: #f4a300;
       color: #fff;
       border: none;
       padding: 10px 20px;
@@ -877,53 +883,73 @@
     }
 
     .zodiac-wrapper {
-      position: relative;
-      width: 100%;
-      max-width: 400px;  /* adjust size */
-      aspect-ratio: 1/1; /* keep square */
-      margin: 0 auto;
-    }
+  position: relative;
+  width: 100%;
+  max-width: 320px;  /* slightly smaller for mobiles */
+  aspect-ratio: 1/1; /* keeps square */
+  margin: 0 auto;
+  overflow: hidden;  /* ensures no overflow */
+}
 
-    .outer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('images/abt-removebg-preview.png') no-repeat center;
-      background-size: contain;
-      animation: spin 5s linear infinite;
-    }
+.outer, .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-    .inner {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('images/abt2-removebg-preview.png') no-repeat center;
-      background-size: contain;
-    }
+/* Animation */
+.outer {
+  background-image: url('images/abt-removebg-preview.png');
+  animation: spin 8s linear infinite; /* slower for smoothness */
+}
 
-    @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-      .about-section {
-      padding: 30px;
-    }
+.inner {
+  background-image: url('images/abt2-removebg-preview.png');
+}
 
-    .about-section h2 {
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-    }
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
-    .about-section p {
-      font-size: 1rem;
-      line-height: 1.7;
-      color: #444;
-    }
+/* About section styling */
+.about-section {
+  padding: 30px;
+  text-align: center; /* better for mobile */
+}
+
+.about-section h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* 📱 Mobile fix */
+@media (max-width: 576px) {
+  .zodiac-wrapper {
+    max-width: 220px; /* smaller size for phones */
+  }
+
+  .about-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
+  }
+}
+
     .gallery-item {
   overflow: hidden;
   border-radius: 15px;
@@ -1025,4 +1051,296 @@
       height: 100%;
       background: url('images/palm.png') no-repeat center;
       background-size: contain;
+    }
+       /* Counter Section */
+    .counter-section {
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .counter-section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 50px;
+    }
+
+    .counter-box {
+      background-color: #7a0f0f;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+      padding: 30px 20px;
+      backdrop-filter: blur(6px);
+      transition: transform 0.3s ease;
+    }
+
+    .counter-box:hover {
+      transform: translateY(-6px);
+    }
+
+    .counter-number {
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: #ffdd00;
+      line-height: 1;
+    }
+
+    .counter-title {
+      margin-top: 10px;
+      font-weight: 500;
+      color: #ddd;
+      font-size: 1.1rem;
+    }
+
+    @media (max-width: 576px) {
+      .counter-number {
+        font-size: 2.1rem;
+      }
+    }
+     section.trust-section {
+       background: linear-gradient(rgba(122, 15, 15, 0.9), rgba(122, 15, 15, 0.95)),
+                  url('images/olaisuvadi.jpg') no-repeat center/cover;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      padding: 80px 0;
+      position: relative;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 60px;
+      color: #ffd700;
+      text-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+    }
+
+    .trust-line {
+      position: relative;
+      border-left: 3px solid rgba(255, 215, 0, 0.6);
+      margin: 0 auto;
+      padding-left: 30px;
+      max-width: 800px;
+    }
+
+    .trust-item {
+      margin-bottom: 40px;
+      position: relative;
+      opacity: 0;
+      animation: fadeInUp 1s forwards;
+    }
+
+    .trust-item:nth-child(1) { animation-delay: 0.3s; }
+    .trust-item:nth-child(2) { animation-delay: 0.5s; }
+    .trust-item:nth-child(3) { animation-delay: 0.7s; }
+    .trust-item:nth-child(4) { animation-delay: 0.9s; }
+    .trust-item:nth-child(5) { animation-delay: 1.1s; }
+    .trust-item:nth-child(6) { animation-delay: 1.3s; }
+    .trust-item:nth-child(7) { animation-delay: 1.5s; }
+    .trust-item:nth-child(8) { animation-delay: 1.7s; }
+    .trust-item:nth-child(9) { animation-delay: 1.9s; }
+    .trust-item:nth-child(10) { animation-delay: 2.1s; }
+
+    .trust-dot {
+      width: 18px;
+      height: 18px;
+      background: #ffd700;
+      border-radius: 50%;
+      position: absolute;
+      left: -41px;
+      top: 5px;
+      box-shadow: 0 0 10px #ffd700, 0 0 20px #ffa500;
+    }
+
+    .trust-item h5 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #fff;
+    }
+
+    .trust-item p {
+      font-size: 1rem;
+      margin: 0;
+      color: #eee0c9; /* softer brownish white */
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(25px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+      .astrologer-section {
+      background: linear-gradient(rgba(122, 15, 15, 0.9), rgba(0, 0, 0, 0.95));
+      color: #fff;
+      padding: 80px 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .astrologer-section h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #ffd700;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px rgba(255,215,0,0.6);
+    }
+
+    .astrologer-section p {
+      font-size: 1.1rem;
+      color: #eee;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    .btn-astro {
+      display: inline-block;
+      background: #ffd700;
+      color: #000;
+      padding: 12px 28px;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease-in-out;
+      box-shadow: 0 0 15px rgba(255,215,0,0.6);
+    }
+
+    .btn-astro:hover {
+      background: #ffa500;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255,165,0,0.9);
+    }
+
+    .astro-img-circle {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      margin: 0 auto;
+      border-radius: 50%;
+      padding: 10px;
+      background: radial-gradient(circle, #ffd700, #ffa500, transparent 80%);
+      box-shadow: 0 0 25px rgba(255,215,0,0.6), 0 0 50px rgba(255,165,0,0.4);
+      animation: pulseGlow 3s infinite ease-in-out;
+    }
+
+    .astro-img-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+    }
+
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 20px rgba(255,215,0,0.6), 0 0 40px rgba(255,165,0,0.3); }
+      50% { box-shadow: 0 0 40px rgba(255,215,0,0.9), 0 0 80px rgba(255,165,0,0.5); }
+      100% { box-shadow: 0 0 20px rgba(255,215,0,0.6), 0 0 40px rgba(255,165,0,0.3); }
+    }
+
+    @media (max-width: 991px) {
+      .astro-img-circle {
+        width: 220px;
+        height: 220px;
+      }
+      .astrologer-section h2 {
+        text-align: center;
+        margin-top: 30px;
+      }
+      .astrologer-section p, .btn-astro {
+        text-align: center;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    .faq-section {
+      position: relative;
+      padding: 80px 0;
+      z-index: 1;
+    }
+
+    /* Background Image + Blur (No extra color overlay) */
+    .faq-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      
+      filter: blur(6px) brightness(0.6);
+      z-index: -1;
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+    }
+
+    .accordion-item {
+      margin-bottom: 20px;
+      border: none;
+      border-radius: 12px;
+      overflow: hidden;
+      background-color: #7b1818; /* semi-transparent for readability */
+      backdrop-filter: blur(5px);
+      box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    }
+
+    .accordion-button {
+      background: transparent;
+      color: #ffd700;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 18px 20px;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      position: relative;
+      transition: all 0.3s ease;
+      background-color: #7a0f0f;
+    }
+
+    .accordion-button.collapsed {
+      color: #fff;
+    }
+
+    .accordion-button:hover {
+      background: rgba(122, 15, 15, 0.6);
+    }
+
+    /* Remove Bootstrap arrow */
+    .accordion-button::after {
+      display: none;
+    }
+
+    /* Custom + and - icon */
+    .accordion-button::before {
+      content: "+";
+      font-size: 1.6rem;
+      font-weight: bold;
+      color: #ffd700;
+      position: absolute;
+      right: 20px;
+      transition: transform 0.3s ease, content 0.3s ease;
+    }
+
+    .accordion-button:not(.collapsed)::before {
+      content: "-";
+      transform: rotate(180deg);
+    }
+
+    .accordion-body {
+      background: rgba(0, 0, 0, 0.7);
+      color: #ddd;
+      font-size: 1rem;
+      line-height: 1.6;
+      padding: 20px;
+      border-top: 1px solid rgba(255, 215, 0, 0.2);
     }
