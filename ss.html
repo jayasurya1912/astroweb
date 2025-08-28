@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E PLUS Navbar</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #000; /* black background */
+    }
+    .top-bar {
+      font-size: 14px;
+      color: #fff;
+    }
+    .top-bar a {
+      color: #fff;
+      margin-left: 10px;
+    }
+    .social-icons a {
+      width: 32px;
+      height: 32px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+    .navbar {
+      background: #000 !important;
+    }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: #d4a06a !important; /* gold hover */
+    }
+    .dropdown-menu {
+      background: #000;
+    }
+    .dropdown-menu a {
+      color: #fff;
+    }
+    .dropdown-menu a:hover {
+      background: #d4a06a;
+      color: #000;
+    }
+    .highlight {
+      background: #d4a06a;
+      color: #fff !important;
+      border-radius: 2px;
+      padding: 5px 15px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="container-fluid py-2 top-bar">
+    <div class="d-flex justify-content-between align-items-center">
+      <!-- Logo -->
+      <div>
+        <img src="images/mainlogo.jpg" alt="E PLUS Logo" height="60">
+      </div>
+
+      <!-- Address + Social Icons -->
+      <div class="d-flex align-items-center">
+        <span class="me-3">
+          <i class="bi bi-geo-alt-fill"></i> PO.BOX: 81262, AL QUSAIS, DUBAI, UAE
+        </span>
+        <div class="social-icons">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="#">HOME</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">ABOUT US</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle highlight" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+              SERVICES
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Service 1</a></li>
+              <li><a class="dropdown-item" href="#">Service 2</a></li>
+              <li><a class="dropdown-item" href="#">Service 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#">PROJECTS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

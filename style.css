@@ -1,5 +1,6 @@
   Html,body{
-Overflow-x:hidden important 
+Overflow-x:hidden important ;
+font-family: "Times New Roman", Times, serif;
 }
   
   #preloader {
@@ -230,6 +231,7 @@ Overflow-x:hidden important 
       color: white !important;
       padding: 0.5rem 1rem;
       font-weight: 500;
+      font-size: 19px;
       
     }
 
@@ -523,7 +525,7 @@ Overflow-x:hidden important 
       font-size: 16px;
     }
     .astro-text {
-      font-size: 14px;
+      font-size: 17px;
       color: #555;
       min-height: 50px;
       margin-bottom: 12px;
@@ -1217,8 +1219,8 @@ Overflow-x:hidden important 
 
     .astro-img-circle {
       position: relative;
-      width: 280px;
-      height: 280px;
+      width: 350px;
+      height: 350px;
       margin: 0 auto;
       border-radius: 50%;
       padding: 10px;
@@ -1343,4 +1345,110 @@ Overflow-x:hidden important 
       line-height: 1.6;
       padding: 20px;
       border-top: 1px solid rgba(255, 215, 0, 0.2);
+    }
+     .hero-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 50px 0;
+    }
+    .hero-text h2 {
+      font-weight: 700;
+      font-size: 2.5rem;
+      color: #653200;
+      line-height: 1.4;
+      margin-bottom: 20px;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 25px;
+      line-height: 1.8;
+      letter-spacing: 0.5px;
+    }
+    .enquire-btn {
+      background-color: #653200;
+      color: #fff;
+      padding: 12px 35px;
+      border-radius: 30px;
+      border: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .enquire-btn:hover {
+      background-color: #4b2400;
+    }
+    .hero-img img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+     .section-titles {
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 22px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .step-title {
+      color: #2196f3;
+      font-weight: 700;
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .gender-title {
+      color: #ff6600;
+      font-weight: 800;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .divider-line {
+      width: 40px;
+      height: 2px;
+      background-color: #00bcd4;
+      margin: 0 auto 15px;
+    }
+    .apply-btn {
+      background-color: #ff6600;
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      padding: 6px 15px;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+    .apply-btn:hover {
+      background-color: #e65c00;
+      color: #fff;
+    }
+    .step-title {
+      color: #7b1818;
+      font-weight: 700;
+      font-size: 23px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .dropdown-item
+    {
+      font-size: 18px;
+    }
+    .dropdown-item:hover
+    {
+       background: linear-gradient(90deg, #8B4513, #FFD700);
+       color: white;
+    }
+    .step-text {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #333;
+    }
+    .step-block {
+      margin-bottom: 40px;
+    }
+    .step-img {
+      max-width: 100%;
+      border-radius: 3px;
     }
