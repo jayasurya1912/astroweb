@@ -114,54 +114,53 @@
   </div>
 </section>
 
-  <div class="container position-relative mt-5" style="margin-bottom: 3rem;">
-    <div class="row justify-content-center align-items-center" data-aos="zoom-in">
-      
-      <!-- Left Info Box -->
-      <div class="col-lg-6 col-md-12 mb-4">
-        <div class="info-box">
-          <h4><b><span style="color:#ff6600;">Get</span> Expert Nadi Jothidam Online Consultations</b></h4>
-          <p>
-            Vaitheeswaran Koil, also known for its Nadi astrology, is an ancient Indian practice that offers deep insights into a person’s life through palm leaf writings. These sacred texts, written by Indian sages thousands of years ago, contain details about people’s lives, including their past, present, and future.
-          </p>
-          <ul>
-            <li>Our connection with Vaitheeswaran Koil Nadi Astrology, a sacred temple in Tamil Nadu with a large collection of Nadi palm leaves, sets us apart.</li>
-            <li>We make this powerful practice available to people worldwide through our top-notch online Nadi Shastra reading.</li>
-            <li>No matter where you are, you can access the wisdom of sages from Vaitheeswaran Koil and learn important things about your life’s path.</li>
-            <li>As a leading provider of online Nadi astrology in India, we bring this ancient knowledge directly to your fingertips.</li>
-            <li>With our online Nadi astrology services, you don’t need to travel to Tamil Nadu to experience this spiritual treasure</li>
-          </ul>
-        </div>
+ <div class="container position-relative mt-5" style="margin-bottom: 3rem;">
+  <div class="row justify-content-center align-items-stretch" data-aos="zoom-in">
+    
+    <!-- Left Info Box -->
+    <div class="col-lg-6 col-md-12 mb-4 d-flex">
+      <div class="info-box flex-fill">
+        <h4><b><span style="color:#ff6600;">Get</span> Expert Nadi Jothidam Online Consultations</b></h4>
+        <p>
+          Vaitheeswaran Koil, also known for its Nadi astrology, is an ancient Indian practice that offers deep insights into a person’s life through palm leaf writings. These sacred texts, written by Indian sages thousands of years ago, contain details about people’s lives, including their past, present, and future.
+        </p>
+        <ul>
+          <li>Our connection with Vaitheeswaran Koil Nadi Astrology, a sacred temple in Tamil Nadu with a large collection of Nadi palm leaves, sets us apart.</li>
+          <li>We make this powerful practice available to people worldwide through our top-notch online Nadi Shastra reading.</li>
+          <li>No matter where you are, you can access the wisdom of sages from Vaitheeswaran Koil and learn important things about your life’s path.</li>
+          <li>As a leading provider of online Nadi astrology in India, we bring this ancient knowledge directly to your fingertips.</li>
+          <li>With our online Nadi astrology services, you don’t need to travel to Tamil Nadu to experience this spiritual treasure</li>
+        </ul>
       </div>
-      
-      <!-- Right Form Box -->
-      <div class="col-lg-5 col-md-12">
-        <div class="form-box">
-          <h4 class="text-center mb-3">Get in Touch</h4>
-          <form>
-            <div class="row mb-3">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="First Name" required>
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Phone Number" required>
-              </div>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email-ID" required>
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Location" required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
-            </div>
-            <button type="submit">SUBMIT</button>
-          </form>
-        </div>
-      </div>
-
     </div>
+    
+    <!-- Right Form Box -->
+    <div class="col-lg-5 col-md-12 d-flex">
+      <div class="form-box flex-fill">
+        <h4 class="text-center mb-3">Get in Touch</h4>
+        <form id="nadiForm">
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" id="firstName" class="form-control" placeholder="Name" required>
+            </div>
+            <div class="col">
+              <input type="text" id="phoneNumber" class="form-control" placeholder="Phone Number" required>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input type="email" id="email" class="form-control" placeholder="Email-ID" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" id="location" class="form-control" placeholder="Your Location" required>
+          </div>
+          <div class="mb-3">
+            <textarea id="message" class="form-control" rows="3" placeholder="Your message"></textarea>
+          </div>
+          <button type="submit">SUBMIT</button>
+        </form>
+      </div>
+    </div>
+
   </div>
 </div>
 
@@ -213,6 +212,31 @@
   </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS (replace with your actual Public Key)
+  emailjs.init("C-9c_wg8KLM9OS87U"); 
+
+  document.getElementById("nadiForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const templateParams = {
+      firstName: document.getElementById("firstName").value,
+      phoneNumber: document.getElementById("phoneNumber").value,
+      email: document.getElementById("email").value,
+      location: document.getElementById("location").value,
+      message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_jg85njw", "template_u5ag4sk", templateParams)
+      .then(function (response) {
+        alert("Thank you for contacting us. We will get back to you soon.");
+        document.getElementById("nadiForm").reset();
+      }, function (error) {
+        alert("❌ Failed to send email: " + JSON.stringify(error));
+      });
+  });
+</script>
 <script src="script.js"></script>
 </body>
 </html>

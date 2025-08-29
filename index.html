@@ -864,26 +864,26 @@
       <div class="col-lg-5 col-md-12">
         <div class="form-box">
           <h4 class="text-center mb-3">Get in Touch</h4>
-          <form>
-            <div class="row mb-3">
-              <div class="col">
-                <input type="text" class="form-control" placeholder="First Name" required>
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" placeholder="Phone Number" required>
-              </div>
+          <form id="nadiForm">
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" id="firstName" class="form-control" placeholder="Name" required>
             </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email-ID" required>
+            <div class="col">
+              <input type="text" id="phoneNumber" class="form-control" placeholder="Phone Number" required>
             </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Location" required>
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="3" placeholder="Your message"></textarea>
-            </div>
-            <button type="submit">SUBMIT</button>
-          </form>
+          </div>
+          <div class="mb-3">
+            <input type="email" id="email" class="form-control" placeholder="Email-ID" required>
+          </div>
+          <div class="mb-3">
+            <input type="text" id="location" class="form-control" placeholder="Your Location" required>
+          </div>
+          <div class="mb-3">
+            <textarea id="message" class="form-control" rows="3" placeholder="Your message"></textarea>
+          </div>
+          <button type="submit">SUBMIT</button>
+        </form>
         </div>
       </div>
 
@@ -1002,6 +1002,31 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS (replace with your actual Public Key)
+  emailjs.init("C-9c_wg8KLM9OS87U"); 
+
+  document.getElementById("nadiForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const templateParams = {
+      firstName: document.getElementById("firstName").value,
+      phoneNumber: document.getElementById("phoneNumber").value,
+      email: document.getElementById("email").value,
+      location: document.getElementById("location").value,
+      message: document.getElementById("message").value,
+    };
+
+    emailjs.send("service_jg85njw", "template_u5ag4sk", templateParams)
+      .then(function (response) {
+        alert("Thank you for contacting us. We will get back to you soon.");
+        document.getElementById("nadiForm").reset();
+      }, function (error) {
+        alert("❌ Failed to send email: " + JSON.stringify(error));
+      });
+  });
+</script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,17 +1,19 @@
-     function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'en',
-        includedLanguages: 'en,ta,hi,fr,de,es,it,zh-CN,ar',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-      }, 'google_translate_element');
-    }
-  
+     
   window.addEventListener("load", () => {
     setTimeout(() => {
       document.getElementById("preloader").style.display = "none";
       document.getElementById("main-content").style.display = "block";
     }, 500); // 2.8 sec delay
   });
+   
+   function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,ta,hi,fr,de,es,it,zh-CN,ar',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      }, 'google_translate_element');
+    }
+
 
  
      AOS.init();
