@@ -616,48 +616,7 @@ font-family: "Times New Roman", Times, serif;
     {
         color: yellow;
     }
-    .nadi-review-card {
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 20px;
-      background: #fff;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      height: 100%;
-    }
-    .nadi-review-header {
-      display: flex;
-      align-items: center;
-      margin-bottom: 10px;
-    }
-    .nadi-review-header img {
-      width: 45px;
-      height: 45px;
-      border-radius: 50%;
-      margin-right: 10px;
-    }
-    .nadi-review-name {
-      font-weight: 600;
-      font-size: 16px;
-    }
-    .nadi-review-stars {
-      color: #fbbc04; /* Google yellow stars */
-      font-size: 14px;
-    }
-    .nadi-review-text {
-      font-size: 14px;
-      color: #555;
-      margin-top: 10px;
-    }
-    /* Custom Indicators */
-    .nadi-carousel-indicators [data-bs-target] {
-      background-color: #555;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-    }
-    .nadi-carousel-indicators {
-      bottom: -55px;
-    }
+    
     .lmo {
       position: relative;
       background: url('images/back.webp') no-repeat center center/cover;
@@ -864,8 +823,8 @@ font-family: "Times New Roman", Times, serif;
     box-shadow: 0 6px 14px rgba(0,0,0,0.3);
   }
   .floating-buttons img {
-    width: 28px;
-    height: 28px;
+    width: 48px;
+    height: 48px;
     object-fit: contain;
   }
   .btn-dangerese
@@ -1219,8 +1178,8 @@ font-family: "Times New Roman", Times, serif;
 
     .astro-img-circle {
       position: relative;
-      width: 350px;
-      height: 350px;
+      width: 380px;
+      height: 380px;
       margin: 0 auto;
       border-radius: 50%;
       padding: 10px;
@@ -1451,4 +1410,302 @@ font-family: "Times New Roman", Times, serif;
     .step-img {
       max-width: 100%;
       border-radius: 3px;
+    }
+     .testimonial-card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      background: #fff;
+      height: 100%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    }
+    .testimonial-card h5 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
+    }
+    .testimonial-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border-radius: 50%;
+    }
+    /* Move indicators down */
+    .carousel-indicators {
+      position: static;
+      margin-top: 20px;
+    }
+    .carousel-indicators [data-bs-target] {
+      background-color: #444;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+    .chapter-card {
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      border-bottom-right-radius: 70px;
+      border-top-left-radius: 70px;
+    }
+    .chapter-card:hover {
+      transform: translateY(-5px);
+    }
+    .chapter-img {
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+    .chapter-content {
+      background-color: #7a0f0f;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+    .book-btn
+    {
+      background: linear-gradient(90deg, #8B4513, #FFD700);
+      color: white;
+      font-size: 19px;
+      margin-top: 1rem;
+    }
+    .nadi-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 1.5rem;
+      padding: 0;
+      list-style: none;
+    }
+    .nadi-tab-link {
+      border: 1px solid #7b1818;
+      color:  #7b1818;
+      font-weight: 600;
+      padding: 8px 16px;
+      background: transparent;
+      border-radius: 0;
+      transition: 0.3s;
+    }
+    .nadi-tab-link.active {
+      background:  #7b1818;
+      color: #fff;
+    }
+    .nadi-tab-link:hover {
+      background:  #7b1818;
+      color: #fff;
+    }
+    .content-title {
+      color: #7b1818;
+      font-weight: bold;
+    }
+    .highlight-box {
+      background-color: #7a0f0f;
+      color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .tab-pane img {
+      border-radius: 10px;
+      max-width: 100%;
+    }
+    
+     .astro-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      border: 1px solid #e9ecef;
+      border-radius: 1rem;
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+      background: #fff;
+    }
+
+    .astro-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0.5rem 1.25rem rgba(0,0,0,.08);
+    }
+
+    .astro-card-img {
+      height: 220px;
+      object-fit: cover;
+      width: 100%;
+    }
+
+    .astro-card-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .astro-card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #8B0000;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      text-align: center;
+    }
+
+    .astro-card-text {
+      flex-grow: 1;
+      font-size: 17px;
+      color: #333;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    .astro-card-btn {
+      margin-top: auto;
+      text-align: center;
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      border-radius: 0.5rem;
+      background: #8B0000;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .astro-card-btn:hover {
+      background: #600000;
+      color: #fff;
+    }
+      .custom-card {
+      border: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease-in-out;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      background-color: white;
+      padding: 10px;
+    }
+    .custom-card:hover {
+      transform: translateY(-5px);
+    }
+    .custom-card img {
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .custom-card-body {
+      padding: 15px;
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .custom-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .custom-text {
+      font-size: 18px;
+      margin-bottom: 15px;
+      line-height: 1.6;
+      text-align: justify;
+      flex-grow: 1;
+    }
+    .custom-btn {
+      background: #7b1818;
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 8px 18px;
+      margin-top: auto;
+      font-size: 17px;
+    }
+    .custom-btn:hover {
+      background: white;
+      border: solid 1px #7b1818;
+      color: #7b1818;
+    }
+    .lang-dropdown-container {
+      position: fixed;
+      top: 10px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    .lang-select {
+      display: flex;
+      align-items: center;
+      padding: 5px 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    .lang-select img {
+      width: 20px;
+      height: 14px;
+      margin-right: 8px;
+    }
+
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+     .astro-gallery-section {
+      padding: 60px 20px;
+    }
+    .astro-gallery-title {
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-weight: 600;
+      color: #7a0f0f;
+    }
+    .astro-gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease-in-out;
+      height: 250px; /* ensures same height */
+    }
+    .astro-gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .astro-gallery-item:hover img {
+      transform: scale(1.1);
+    }
+    .astro-gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(122, 15, 15, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 500;
+      text-align: center;
+      padding: 10px;
+    }
+    .astro-gallery-item:hover .astro-gallery-overlay {
+      opacity: 1;
     }
