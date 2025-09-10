@@ -3,7 +3,7 @@
     setTimeout(() => {
       document.getElementById("preloader").style.display = "none";
       document.getElementById("main-content").style.display = "block";
-    }, 500); // 2.8 sec delay
+    }, 1000); // 2.8 sec delay
   });
    
    function googleTranslateElementInit() {
@@ -73,3 +73,27 @@
         }
       });
     })();
+
+    
+  document.addEventListener("DOMContentLoaded", function () {
+    const stepTitles = document.querySelectorAll(".step-title");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          } else {
+            entry.target.classList.remove("active");
+          }
+        });
+      },
+      { threshold: 0.6 } // 60% visible before activating
+    );
+
+    stepTitles.forEach((title) => {
+      observer.observe(title);
+    });
+  });
+
+
