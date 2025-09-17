@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Meet Floating Button</title>
+  <style>
+    /* Floating Button */
+    .gmeet-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: white; /* GMeet Teal/Green shade */
+      color: #fff;
+      border-radius: 50%;
+      text-align: center;
+      font-size: 28px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .gmeet-float:hover {
+      transform: scale(1.1);
+    }
+    .gmeet-float img {
+      width: 32px;
+      height: 32px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Floating Google Meet Button -->
+<a href="https://meet.google.com/abc-defg-hij" 
+   class="gmeet-float" 
+   target="_blank" 
+   title="Join Google Meet">
+   <img src="https://www.gstatic.com/images/branding/product/1x/meet_2020q4_48dp.png" alt="Google Meet">
+</a>
+
+</body>
+</html>
