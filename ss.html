@@ -3,30 +3,154 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kandam Predictions</title>
+  <title>Mission Vision Values</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <!-- AOS Animation Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #f8f9fa;
+    .circle-box {
+      text-align: center;
+      position: relative;
     }
-    
+
+    .circle {
+      border-radius: 50%;
+      border: 16px solid #777;
+      width: 100%;
+      max-width: 350px;
+      aspect-ratio: 1 / 1; /* keeps perfect circle */
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0px 10px 18px rgba(0,0,0,0.12);
+      position: relative;
+      z-index: 2;
+    }
+
+    .circle.vision {
+      border-color: #c58a3a;
+    }
+
+    .circle i {
+      font-size: 30px;
+      margin-bottom: 12px;
+      color: #777;
+    }
+
+    .circle.vision i {
+      color: #c58a3a;
+    }
+
+    .circle h5 {
+      font-weight: 700;
+      margin-bottom: 12px;
+      font-size: 18px;
+    }
+
+    .circle h5 span {
+      font-weight: 400;
+      color: #777;
+    }
+
+    .circle p {
+      font-size: 14px;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Semi-circle design */
+    /* Semi-circle design */
+.semi-circle {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 2 / 1; /* width:height ratio */
+  border: 16px solid rgba(232, 227, 227, 0.896);
+  border-bottom: none;
+  border-radius: 160px 160px 0 0;
+  margin: auto;
+}
+
+.semi-circle.middle {
+  border-color: rgba(238, 201, 159, 0.629);
+  border-bottom: none;
+}
+
+/* Hide semi-circles on screens <= 1000px */
+@media (max-width: 1000px) {
+  .semi-circle {
+    display: none !important;
+  }
+}
+
+
+    /* Responsive fine-tuning */
+    @media (max-width: 768px) {
+      .circle {
+        max-width: 250px;
+        padding: 15px;
+      }
+      .circle h5 {
+        font-size: 16px;
+      }
+      .circle p {
+        font-size: 13px;
+      }
+      .semi-circle {
+        max-width: 240px;
+      }
+    }
   </style>
 </head>
 <body>
 
+<div class="container py-5">
+  <!-- Row 1: Circles -->
+  <div class="row justify-content-center g-4 text-center">
+    <!-- Mission -->
+    <div class="col-lg-4 col-md-6 circle-box">
+      <div class="circle">
+        <i class="fas fa-bullseye"></i>
+        <h5>OUR <span>MISSION</span></h5>
+        <p>To be a leading force in delivering seamless Interiors Fit-out and MEP solutions with uncompromised quality and safety. We strive to create lasting partnerships built on trust, innovation, and excellence.</p>
+      </div>
+    </div>
 
-<!-- JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-  AOS.init({
-           // animation happens only once
-  });
-</script>
+    <!-- Vision -->
+    <div class="col-lg-4 col-md-6 circle-box vision">
+      <div class="circle vision">
+        <i class="fas fa-eye"></i>
+        <h5>OUR <span>VISION</span></h5>
+        <p>To be a trusted MEP & Interiors Fit-out Contractor, delivering quality on time with international standards. We ensure customer satisfaction through ethics, safety, and strong partnerships with clients, suppliers, and employees.</p>
+      </div>
+    </div>
+
+    <!-- Values -->
+    <div class="col-lg-4 col-md-6 circle-box">
+      <div class="circle">
+        <i class="fas fa-hand-holding-heart"></i>
+        <h5>OUR <span>VALUES</span></h5>
+        <p>We uphold integrity, excellence, and safety while fostering innovation, teamwork, and sustainability. With a customer-first approach, we deliver quality solutions that create lasting impact.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: Semi-circles -->
+  <div class="row justify-content-center g-4 text-center ">
+    <div class="col-lg-4 col-md-6">
+      <div class="semi-circle"></div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="semi-circle middle"></div>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <div class="semi-circle"></div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
