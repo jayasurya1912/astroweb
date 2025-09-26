@@ -2,6 +2,102 @@
 Overflow-x:hidden important ;
 font-family: "Times New Roman", Times, serif;
 }
+
+   /* Overlay background */
+    .popup-overlay-custom {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9998;
+    }
+
+    /* Popup box */
+    .popup-box-custom {
+      background: #7b1717;
+      color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      width: 420px;
+      max-width: 95%;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+      position: relative;
+      z-index: 9999;
+      animation: popupFadeIn 0.6s ease;
+    }
+
+    .popup-box-custom h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Input and textarea styling */
+    .popup-box-custom input,
+    .popup-box-custom textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 7px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+
+    /* Row for Name & Phone side by side */
+    .popup-row-custom {
+      display: flex;
+      gap: 10px;
+    }
+
+    .popup-row-custom input {
+      flex: 1;
+      margin-bottom: 15px;
+    }
+
+    .popup-submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: linear-gradient(to right, #ff9800, #ffc107);
+      border: none;
+      border-radius: 7px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      color: #fff;
+    }
+
+    .popup-submit-btn:hover {
+      background: linear-gradient(to right, #e68900, #ffb300);
+    }
+
+    /* Close button */
+    .popup-close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @keyframes popupFadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    /* Responsive fix: stack Name & Phone on mobile */
+    @media (max-width: 500px) {
+      .popup-row-custom {
+        flex-direction: column;
+      }
+    }
   
   #preloader {
       position: fixed;
@@ -1842,3 +1938,5 @@ font-family: "Times New Roman", Times, serif;
         left: -30px;
       }
     }
+
+    

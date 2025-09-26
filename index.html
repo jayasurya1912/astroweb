@@ -15,7 +15,23 @@
 <body>
 
 
-
+<!-- Popup Overlay -->
+<div class="popup-overlay-custom" id="popupFormCustom">
+  <div class="popup-box-custom">
+    <span class="popup-close-btn" onclick="closePopupCustom()">&times;</span>
+    <h2>Get in Touch</h2>
+    <form id="nadiForm">
+      <div class="popup-row-custom">
+        <input type="text" placeholder="Name" id="firstName" required>
+        <input type="text" placeholder="Phone Number" id="phoneNumber" required>
+      </div>
+      <input type="email" placeholder="Email-ID" id="email" required>
+      <input type="text" placeholder="Your Location" id="location">
+      <textarea rows="3" placeholder="Your message" id="message"></textarea>
+      <button type="submit" class="popup-submit-btn">SUBMIT</button>
+    </form>
+  </div>
+</div>
 
 
 
@@ -935,11 +951,11 @@
 </section>
 
 
-  <div class="container-fluid lmo" >
+  <!-- <div class="container-fluid lmo" >
   <div class="container position-relative">
     <div class="row justify-content-center align-items-center" data-aos="zoom-in">
       
-      <!-- Left Info Box -->
+      
       <div class="col-lg-6 col-md-12 mb-4">
         <div class="info-box">
           <h4><b><span style="color:#ff6600;">Get</span> Expert Nadi Jothidam Online Consultations</b></h4>
@@ -956,7 +972,7 @@
         </div>
       </div>
       
-      <!-- Right Form Box -->
+      
       <div class="col-lg-5 col-md-12">
         <div class="form-box">
           <h4 class="text-center mb-3">Get in Touch</h4>
@@ -985,7 +1001,7 @@
 
     </div>
   </div>
-</div>
+</div> -->
 
 <div class="container-fluid" style="background-color: #FFD8B1;border-top: #7b1818 5px solid;border-bottom: #7b1818 5px solid;">
 <div class="container py-5">
@@ -1076,12 +1092,7 @@
     </div>
   </div>
 
-  <a href="https://meet.google.com/abc-defg-hij" 
-   class="gmeet-float" 
-   target="_blank" 
-   title="Join Google Meet">
-   <img src="https://www.gstatic.com/images/branding/product/1x/meet_2020q4_48dp.png" alt="Google Meet">
-</a>
+  
 </footer>
 <div class="floating-buttons">
   <!-- IMO -->
@@ -1130,6 +1141,18 @@
         alert("❌ Failed to send email: " + JSON.stringify(error));
       });
   });
+</script>
+
+<script>
+    // Show popup after 4 seconds
+  setTimeout(() => {
+    document.getElementById("popupFormCustom").style.display = "flex";
+  }, 4000);
+
+  // Close popup
+  function closePopupCustom() {
+    document.getElementById("popupFormCustom").style.display = "none";
+  }
 </script>
    
 </body>

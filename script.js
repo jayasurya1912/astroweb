@@ -5,6 +5,15 @@
       document.getElementById("main-content").style.display = "block";
     }, 1000); // 2.8 sec delay
   });
+
+  setTimeout(() => {
+    document.getElementById("popupForm").style.display = "flex";
+  }, 4000);
+
+  // Close popup
+  function closePopup() {
+    document.getElementById("popupForm").style.display = "none";
+  }
    
    function googleTranslateElementInit() {
     new google.translate.TranslateElement({
